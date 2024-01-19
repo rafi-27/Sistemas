@@ -22,7 +22,7 @@ echo Elige una de estas opciones:
 echo 1) Jugar al piedra, papel, o tijeras.
 echo 2) Python Turtles - Te va gustar.
 echo 3) Bromita!
-echo 4) pensar
+echo 4) Juego de ahorcado sobre informatica. Dos opciones en batch o python.
 
 echo.
 echo %COLORROJO%0) SALIR%COLORNORMAL%
@@ -127,5 +127,88 @@ exit
 goto :eof
 :opcion4
 rem Implementar lógica para la opción 4 aquí
+set /p opcionSeleccionada=Cual quieres 1 bacth 2 python: 
+if !opcionSeleccionada! EQU 1 (
+    setlocal EnableDelayedExpansion
+
+rem Palabras para el juego
+set Palabras[0]=RAM
+set Palabras[1]=programacion
+set Palabras[2]=hangman
+set Palabras[3]=batch
+set Palabras[4]=Sistemas
+
+rem Seleccionar una palabra al azar
+set /a "Indice=%random% %% 5"
+set PalabraSecreta=!Palabras[%Indice%]!
+
+rem Inicializar variables
+set "PalabraAdivinada="
+set "IntentosFallidos="
+set "Vidas=6"
+
+:Juego
+cls
+echo.
+echo Palabra a adivinar: !PalabraAdivinada!
+echo Intentos fallidos: !IntentosFallidos!
+echo Vidas restantes: !Vidas!
+
+rem Obtener la letra del jugador
+set "Letra="
+set /p "Letra=Ingresa una letra: "
+
+rem Verificar si la letra ya ha sido intentada
+if defined IntentosFallidos (
+    echo !IntentosFallidos! | find /i "!Letra!" >nul
+    if not errorlevel 1 (
+        echo Ya intentaste con esa letra. Intenta con otra.
+        timeout /nobreak /t 2 >nul
+        goto Juego
+    )
+)
+
+rem Verificar si la letra está en la palabra
+set "Acierto="
+for /l %%i in (0, 1, 10) do (
+    set "LetraPalabra=!PalabraSecreta:~%%i,1!"
+    if /i "!Letra!"=="!LetraPalabra!" (
+        set "Acierto=true"
+        set "PalabraAdivinada=!PalabraAdivinada!!Letra!"
+    ) else (
+        set "PalabraAdivinada=!PalabraAdivinada!_"
+    )
+)
+
+rem Actualizar intentos fallidos si no hay acierto
+if not defined Acierto (
+    set "IntentosFallidos=!IntentosFallidos!!Letra! "
+    set /a "Vidas-=1"
+)
+
+rem Verificar si el jugador ganó o perdió
+if "!PalabraAdivinada!"=="!PalabraSecreta!" (
+    cls
+    echo ¡Felicidades! Has adivinado la palabra: !PalabraSecreta!
+    goto FinJuego
+)
+
+if !Vidas! leq 0 (
+    cls
+    echo ¡Oh no! Te has quedado sin vidas. La palabra era: !PalabraSecreta!
+    goto FinJuego
+)
+
+rem Continuar el juego
+goto Juego
+
+:FinJuego
+echo.
+echo Juego terminado.
+pause >nul
+exit /b
+) else if !opcionSeleccionada! EQU 2 (
+    start juego.py
+)
 
 goto :eof
