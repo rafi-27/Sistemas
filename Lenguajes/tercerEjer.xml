@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<almacen_Viviendas>
+<viviendas>
+<tipo_vivienda>Piso</tipo_vivienda>
+<esta_en_venta alquilada="Alquiler" comprada="comprada">Esta en venta o alquiler</esta_en_venta>
+<precio moneda="€">150.000</precio>
+<superficie unidad_de_medicion="metros cuadrados"></superficie>
+<direccion>
+<calle>calle santa maria</calle>
+<codigo_postal>03190</codigo_postal>
+<poblacion>Pilar de la horadada</poblacion>
+</direccion>
+</viviendas>
+
+<viviendas>
+<tipo_vivienda>Casa</tipo_vivienda>
+<esta_en_venta alquilada="Alquiler" comprada="comprada">Esta en venta o alquiler</esta_en_venta>
+<precio moneda="€">50.000</precio>
+<superficie unidad_de_medicion="metros cuadrados">100m2</superficie>
+<direccion>
+<calle>calle santa maria</calle>
+<codigo_postal>03190</codigo_postal>
+<poblacion>Pilar de la horadada</poblacion>
+</direccion>
+</viviendas>
+
+<viviendas>
+<tipo_vivienda>duplex</tipo_vivienda>
+<esta_en_venta alquilada="Alquiler" comprada="comprada">Esta en venta o alquiler</esta_en_venta>
+<precio moneda="€">149.999</precio>
+<superficie unidad_de_medicion="metros cuadrados">90m2</superficie>
+<direccion>
+<calle>calle santa fe</calle>
+<codigo_postal>03190</codigo_postal>
+<poblacion>Pilar de la horadada</poblacion>
+</direccion>
+</viviendas>
+</almacen_Viviendas>

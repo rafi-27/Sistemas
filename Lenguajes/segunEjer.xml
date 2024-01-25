@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<juegos>
+    <catan>
+    <Creador>Klaus Teuber</Creador>
+    <Cantidad_jugadores>=2-4</Cantidad_jugadores>
+    <Tiempo_medio_de_partida tiempo="minutos">75</Tiempo_medio_de_partida>
+    <Temática>comercio</Temática>
+    <Objetivo>El objetivo es colonizar la isla y para ello tendrás que acumular 10 puntos.</Objetivo>
+    <Descripción>Demuestra tus dotes de comerciante, compra materias primas, vende las que producen tus campos y construye poblados y carreteras para conseguir puntos.</Descripción>
+    <Precio moneda="€">38.50</Precio>
+    <Mas_Info>Más información en https://youtu.be/Lh5LcChAzTg?si=-Q5dkzD7A8K5oBuk</Mas_Info>
+    </catan>
+
+    <Carcassome>
+    <Creador>Hans mi Glück</Creador>
+    <Cantidad_jugadores>=2-5</Cantidad_jugadores>
+    <Tiempo_medio_de_partida tiempo="minutos">35</Tiempo_medio_de_partida>
+    <Temática>Construccion</Temática>
+    <Objetivo>Con la táctica trazada, saca una pieza, busca su posición lógica, suma al marcador los puntos que te corresponden y, si es el momento, pon un seguidor.</Objetivo>
+    <Descripción>¿Sabes quién tenía el poder en la Edad Media? ¿Y quién abastecía a las ciudades? Entonces en Carcassonne lo tienes fácil, pon al monje en el claustro y al granjero en el campo y lograrás muchos puntos al final del juego</Descripción>
+    <Precio moneda="€">27.00</Precio>
+    <Mas_Info>Más información en https://youtu.be/b0SDEcRwOlc?si=h0Nu8CwH7JLgaFFm</Mas_Info>
+    </Carcassome>
+
+    <Bang>
+    <Creador>Bang</Creador>
+    <Cantidad_jugadores>=4-7</Cantidad_jugadores>
+    <Tiempo_medio_de_partida tiempo="minutos">40</Tiempo_medio_de_partida>
+    <Temática>En el Salvaje Oeste</Temática>
+    <Objetivo/>
+    <Descripción>En el Salvaje Oeste, los Forajidos dan caza al Sheriff, el Sheriff da caza a los Forajidos, y el Renegado urde su plan en secreto, listo para unirse a cualquiera de los bandos. Dentro de poco, ¡las balas comenzarán a zumbar!</Descripción>
+    <Precio moneda="€">19,50</Precio>
+    <Mas_Info>Más información en https://youtu.be/OofGrvD6Zaw?si=LYmQnxakLBGsRrWw</Mas_Info>
+    </Bang>
+</juegos>
